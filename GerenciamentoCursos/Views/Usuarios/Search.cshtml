@@ -1,0 +1,57 @@
+﻿@model IEnumerable<GerenciamentoCursos.Models.Oferta>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeCurso)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NomeCurso)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cidade)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Estado)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<form asp-action="Search">
+    <p>
+        Cidade: <input type="text" name="cidade" />
+        Estado: <input type="text" name="estado" />
+        <input type="submit" value="Search" />
+    </p>
+</form>

@@ -1,0 +1,66 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20210609104708_Initial.cs" />
+    <Compile Remove="Migrations\20210609104708_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20210609105953_Inicial.cs" />
+    <Compile Remove="Migrations\20210609105953_Inicial.Designer.cs" />
+    <Compile Remove="Migrations\20210609122137_OutrasEntidades.cs" />
+    <Compile Remove="Migrations\20210609122137_OutrasEntidades.Designer.cs" />
+    <Compile Remove="Migrations\20210609130259_AtualizacaoEntidades.cs" />
+    <Compile Remove="Migrations\20210609130259_AtualizacaoEntidades.Designer.cs" />
+    <Compile Remove="Migrations\20210609140114_AtualizacaoEntidades3.cs" />
+    <Compile Remove="Migrations\20210609140114_AtualizacaoEntidades3.Designer.cs" />
+    <Compile Remove="Migrations\20210609171253_ChaveEstrangeira.cs" />
+    <Compile Remove="Migrations\20210609171253_ChaveEstrangeira.Designer.cs" />
+    <Compile Remove="Migrations\20210609184508_ChaveEstrangeira2.cs" />
+    <Compile Remove="Migrations\20210609184508_ChaveEstrangeira2.Designer.cs" />
+    <Compile Remove="Migrations\20210609200537_ChaveEstrangeira3.cs" />
+    <Compile Remove="Migrations\20210609200537_ChaveEstrangeira3.Designer.cs" />
+    <Compile Remove="Migrations\20210609215225_ChaveEstrangeira5.cs" />
+    <Compile Remove="Migrations\20210609215225_ChaveEstrangeira5.Designer.cs" />
+    <Compile Remove="Migrations\20210609224350_ChaveEstrangeira4.cs" />
+    <Compile Remove="Migrations\20210609224350_ChaveEstrangeira4.Designer.cs" />
+    <Compile Remove="Migrations\20210610143301_TesteTabelaOferta.cs" />
+    <Compile Remove="Migrations\20210610143301_TesteTabelaOferta.Designer.cs" />
+    <Compile Remove="Migrations\20210610145039_TesteTabelaOferta2.cs" />
+    <Compile Remove="Migrations\20210610145039_TesteTabelaOferta2.Designer.cs" />
+    <Compile Remove="Migrations\20210610152550_TesteTabelaOferta3.cs" />
+    <Compile Remove="Migrations\20210610152550_TesteTabelaOferta3.Designer.cs" />
+    <Compile Remove="Migrations\20210610185300_TesteTabelaOferta5.cs" />
+    <Compile Remove="Migrations\20210610185300_TesteTabelaOferta5.Designer.cs" />
+    <Compile Remove="Migrations\20210610193618_TesteTabelaOferta.cs" />
+    <Compile Remove="Migrations\20210610193618_TesteTabelaOferta.Designer.cs" />
+    <Compile Remove="Migrations\20210610195124_TesteTabelaOferta.cs" />
+    <Compile Remove="Migrations\20210610195124_TesteTabelaOferta.Designer.cs" />
+    <Compile Remove="Migrations\20210610200217_TesteTabelaOferta.cs" />
+    <Compile Remove="Migrations\20210610200217_TesteTabelaOferta.Designer.cs" />
+    <Compile Remove="Migrations\20210610201934_AtualizacaoTabelas.cs" />
+    <Compile Remove="Migrations\20210610201934_AtualizacaoTabelas.Designer.cs" />
+    <Compile Remove="Migrations\20210610203741_AtualizacaoTabelas.cs" />
+    <Compile Remove="Migrations\20210610203741_AtualizacaoTabelas.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.1.7" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.1.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.1.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.1.14">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.10" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.1.1" />
+  </ItemGroup>
+
+</Project>

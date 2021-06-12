@@ -1,0 +1,50 @@
+﻿@model GerenciamentoCursos.Models.Oferta
+
+@{
+    ViewData["Title"] = "Delete";
+}
+<h2>@ViewData["Title"] - Oferta</h2>
+<h3>Tem certeza que você quer deletar a oferta abaixo?</h3>
+<div>
+
+    <hr />
+    <d1 class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeCurso)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NomeCurso)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoCurso)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TipoCurso)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cidade)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cidade)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+    </d1>
+</div>
+<hr />
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <input type="submit" value="Delete" class="btn btn-danger col-lg-2 col-lg-offset-3" />
+    <a asp-action="Index" class="btn btn-default col-lg-2 col-lg-offset-1">Back to List</a>
+
+</form>
