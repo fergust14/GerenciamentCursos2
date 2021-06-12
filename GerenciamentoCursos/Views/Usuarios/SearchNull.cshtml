@@ -1,10 +1,8 @@
 ﻿@model IEnumerable<GerenciamentoCursos.Models.Oferta>
 
-@{
-    ViewData["Title"] = "Index";
-}
+@{ ViewData["Title"] = "Index"; }
 
-<h2>Index</h2>
+<h2>A busca anterior não encontrou resultados. Tente novamente, por favor.</h2>
 <table class="table">
     <thead>
         <tr>
@@ -13,6 +11,9 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.NomeCurso)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoCurso)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Cidade)
@@ -28,30 +29,33 @@
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Id)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.NomeCurso)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Cidade)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Estado)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Status)
-                </td>
-            </tr>
-        }
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Id)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.NomeCurso)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TipoCurso)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Cidade)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Estado)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Status)
+    </td>
+</tr>}
     </tbody>
+</table>
 </table>
 <form asp-action="Search">
     <p>
         Cidade: <input type="text" name="cidade" />
         Tipo do Curso: <input type="text" name="tipoCurso" />
-        <input type="submit" value="Search" />
+        <input type="submit" value="Buscar" />
     </p>
 </form>

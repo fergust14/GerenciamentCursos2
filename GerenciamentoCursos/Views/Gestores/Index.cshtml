@@ -1,0 +1,99 @@
+﻿@using GerenciamentoCursos.Models
+
+@{ ViewData["Title"] = "Index"; }
+
+<h2>Ofertas Cadastradas</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Nome do Curso
+            </th>
+            <th>
+                Tipo do Curso
+            </th>
+            <th>
+                Cidade
+            </th>
+            <th>
+                Estado
+            </th>
+            <th>
+                Status do Curso
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var oferta in ViewBag.Ofertas)
+        {
+<tr>
+    <td>
+        @oferta.Id
+    </td>
+    <td>
+        @oferta.NomeCurso
+    </td>
+    <td>
+        @oferta.TipoCurso
+    </td>
+    <td>
+        @oferta.Cidade
+    </td>
+    <td>
+        @oferta.Estado
+    </td>
+    <td>
+        @oferta.Status
+    </td>
+    <td>
+        <a asp-action="EditOferta" asp-route-id="@oferta.Id">Editar</a> |
+        <a asp-action="DeleteOferta" asp-route-id="@oferta.Id">Deletar</a>
+    </td>
+</tr>}
+    </tbody>
+</table>
+<p>
+    <a asp-action="CreateOferta" class="btn btn-default">Criar Nova Oferta</a>
+</p>
+
+<h2>Cursos Cadastrados</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Curso
+            </th>
+            <th>
+                Tipo do Curso
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var curso in ViewBag.Cursos)
+        {
+<tr>
+    <td>
+        @curso.Id
+    </td>
+    <td>
+        @curso.Nome
+    </td>
+    <td>
+        @curso.TipoCurso
+    </td>
+    <td>
+        <a asp-action="EditCurso" asp-route-id="@curso.Id">Editar</a> |        
+        <a asp-action="DeleteCurso" asp-route-id="@curso.Id">Deletar</a>
+    </td>
+</tr>}
+    </tbody>
+</table>
+<p>
+    <a asp-action="CreateCurso" class="btn btn-default">Criar Novo Curso</a>
+</p>

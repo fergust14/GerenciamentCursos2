@@ -6,7 +6,7 @@
 
 <h2>Index</h2>
 <table class="table">
-    <thead>
+<thead>
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Id)
@@ -15,7 +15,7 @@
                 @Html.DisplayNameFor(model => model.NomeCurso)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Cidade)
+                @Html.DisplayNameFor(model => model.TipoCurso)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Cidade)
@@ -31,30 +31,34 @@
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Id)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.NomeCurso)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Cidade)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Estado)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Status)
-                </td>                
-            </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeCurso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoCurso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>            
+        </tr>
         }
     </tbody>
+</table>
 </table>
 <form asp-action="Search">
     <p>
         Cidade: <input type="text" name="cidade" />
-        Estado: <input type="text" name="estado" />
+        Tipo do Curso: <input type="text" name="tipoCurso" />
         <input type="submit" value="Buscar" />
     </p>
 </form>

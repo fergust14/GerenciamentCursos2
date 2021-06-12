@@ -1,15 +1,13 @@
 ﻿@model GerenciamentoCursos.Models.ViewModels.CursoFormViewModel
-@{
-    ViewData["Title"] = "Create";
-}
+@{ ViewData["Title"] = "Edit"; }
 
-<h2>Criar Curso</h2>
-
+<h2>Editar Curso</h2>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create">
+        <form asp-action="EditCurso">
             <div asp-validation-summary="All" class="text-danger"></div>
+            <input type="hidden" asp-for="Curso.Id" />
             <div class="form-group">
                 <label asp-for="Curso.Nome" class="control-label"></label>
                 <input asp-for="Curso.Nome" class="form-control" />
@@ -19,7 +17,7 @@
                 <select asp-for="Curso.TipoCurso" asp-items="@(new SelectList(Model.Tipos,"TipoCurso","TipoCurso"))" class="form-control"></select>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default">
+                <input type="submit" value="Salvar" class="btn btn-default">
             </div>
         </form>
     </div>

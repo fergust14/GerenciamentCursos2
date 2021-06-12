@@ -1,0 +1,42 @@
+﻿@model GerenciamentoCursos.Models.ViewModels.OfertaFormViewModel
+@{ ViewData["Title"] = "Edit"; }
+
+<h2>Editar Oferta</h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditOferta">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <input type="hidden" asp-for="Oferta.Id" />
+            <div class="form-group">
+                <label asp-for="Oferta.NomeCurso" class="control-label"></label>
+                <select asp-for="Oferta.NomeCurso" asp-items="@(new SelectList(Model.Cursos,"Nome","Nome"))" class="form-control"></select>
+            </div><div class="form-group">
+                <label asp-for="Oferta.TipoCurso" class="control-label"></label>
+                <select asp-for="Oferta.TipoCurso" asp-items="@(new SelectList(Model.Cursos,"TipoCurso","TipoCurso"))" class="form-control"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Oferta.Cidade" class="control-label"></label>
+                <select asp-for="Oferta.Cidade" asp-items="@(new SelectList(Model.Localidades,"Cidade","Cidade"))" class="form-control"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Oferta.Estado" class="control-label"></label>
+                <select asp-for="Oferta.Estado" asp-items="@(new SelectList(Model.Localidades,"Estado","Estado"))" class="form-control"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Oferta.Status" class="control-label"></label>
+                <select asp-for="Oferta.Status" asp-items="@Model.Status" class="form-control"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-default">
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
