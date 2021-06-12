@@ -1,10 +1,8 @@
-﻿@model GerenciamentoCursos.Models.Tipo
+﻿@model GerenciamentoCursos.Models.Curso
 
-@{
-    ViewData["Title"] = "Delete";
-}
-<h2>Deletar Tipo</h2>
-<h3>Tem certeza que você quer deletar o tipo abaixo?</h3>
+@{ ViewData["Title"] = "Delete"; }
+<h2>Deletar Curso</h2>
+<h3>Tem certeza que você quer deletar o curso abaixo?</h3>
 <div>
 
     <hr />
@@ -16,17 +14,24 @@
             @Html.DisplayFor(model => model.Id)
         </dd>
         <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt>
             @Html.DisplayNameFor(model => model.TipoCurso)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.TipoCurso)
-        </dd>        
+        </dd>
     </d1>
 </div>
 <hr />
-<form asp-action="Delete">
+<form asp-action="DeleteCurso">
     <input type="hidden" asp-for="Id" />
-    <input type="submit" value="Delete" class="btn btn-danger col-lg-2 col-lg-offset-3" />
+    <input type="submit" value="Deletar" class="btn btn-danger col-lg-2 col-lg-offset-3" />
     <a asp-action="Index" class="btn btn-default col-lg-2 col-lg-offset-1">Back to List</a>
 
 </form>
+

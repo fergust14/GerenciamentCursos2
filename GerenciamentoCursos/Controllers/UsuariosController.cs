@@ -44,7 +44,25 @@ namespace GerenciamentoCursos.Controllers
                 {
                     resultados.Add(item);
                 }
-            }           
+            }
+            if (resultados.Count == 0)
+            {
+                return RedirectToAction(nameof(SearchNull));
+            }
+            return View(resultados);
+
+        }
+        public IActionResult SearchNull(string cidade, string tipoCurso)
+        {
+            var list = _ofertaService.FindAll();
+            List<Oferta> resultados = new List<Oferta>();
+            foreach (var item in list)
+            {
+                if (item.Cidade == cidade && item.TipoCurso == tipoCurso && item.Status == "Incrições Abertas")
+                {
+                    resultados.Add(item);
+                }
+            }
             return View(resultados);
 
         }

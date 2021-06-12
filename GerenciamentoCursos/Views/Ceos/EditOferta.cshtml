@@ -1,13 +1,11 @@
 ﻿@model GerenciamentoCursos.Models.ViewModels.OfertaFormViewModel
-@{
-    ViewData["Title"] = "Edit";
-}
+@{ ViewData["Title"] = "Edit"; }
 
 <h2>Editar Oferta</h2>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Edit">
+        <form asp-action="EditOferta">
             <div asp-validation-summary="All" class="text-danger"></div>
             <input type="hidden" asp-for="Oferta.Id" />
             <div class="form-group">
@@ -30,7 +28,7 @@
                 <select asp-for="Oferta.Status" asp-items="@Model.Status" class="form-control"></select>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-default">
+                <input type="submit" value="Salvar" class="btn btn-default">
             </div>
         </form>
     </div>
